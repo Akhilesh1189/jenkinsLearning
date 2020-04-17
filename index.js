@@ -8,11 +8,13 @@ let endTime = moment("07:30 am", "HH:mm a");
 let duration = moment.duration(endTime.diff(startTime));
 
 // duration in hours
-let hours = parseInt(duration.asHours());
+if(duration >= 0){
+    let hours = parseInt(duration.asHours());
 
 // duration in minutes
 var minutes = parseInt(duration.asMinutes()) % 60;
 console.log('minutes', minutes)
+};
 }
 
 setTimeout(intervalFunc, 3000);
